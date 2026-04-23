@@ -1,9 +1,8 @@
-# CamaroSim
-# Automotive Sim-Racing Interface (Dual-Controller Setup)
+# Camaro Sim-Racing Interface
 
-This project documents the conversion of a real-world automotive steering wheel and column stalk assembly into a high-performance USB HID Game Controller for PC flight and racing simulations.
+This project documents the conversion of a real-world Camaro steering wheel and column stalk assembly into a USB HID Game Controller for PC racing simulations.
 
-The system uses two independent **Arduino Pro Micros (ATmega32U4)** to handle the high input count and separate the wiring harnesses for the steering wheel and the steering column.
+The system uses two independent Arduino Pro Micros (ATmega32U4) to handle the high input count and separate the wiring harnesses for the steering wheel and the steering column.
 
 ---
 
@@ -33,9 +32,9 @@ The system uses two independent **Arduino Pro Micros (ATmega32U4)** to handle th
 | :--- | :--- | :--- |
 | **A0** | Paddle Shifters | Analog (10kΩ Pull-up) |
 | **A1** | Cruise Control | Analog (10kΩ Pull-up) |
-| **2-5** | Left Side Buttons | Digital (Input Pull-up) |
+| **2-5** | Audio Buttons | Digital (Input Pull-up) |
 | **6-9** | D-Pad (Up, Down, Left, Right) | Digital (POV Hat) |
-| **10, 14, 15** | Right Side / Phone Buttons | Digital (Input Pull-up) |
+| **10, 14, 15** | Select / Phone Buttons | Digital (Input Pull-up) |
 | **VCC** | Resistor Rail | 5V Output to 10kΩ Pull-ups |
 | **GND** | Ground Rail | Common Ground for all switches |
 
@@ -43,11 +42,11 @@ The system uses two independent **Arduino Pro Micros (ATmega32U4)** to handle th
 | Pin | Function | Logic / Range |
 | :--- | :--- | :--- |
 | **A0** | Wiper Ladder | 10kΩ Pull-up (Infinite = OFF) |
-| **D10** | Wiper High | Digital (Priority Override) |
-| **D2, D3** | Turn Signals | Digital (Input Pull-up) |
-| **D4-D6** | Light Switch (Low, Park, Toggle) | Digital (Input Pull-up) |
-| **D7, D8** | High Beam (In/Out) | Digital (Input Pull-up) |
-| **D9** | Windshield Washer | Digital (Input Pull-up) |
+| **15** | Wiper High | Digital (Priority Override) |
+| **2,3** | Turn Signals | Digital (Input Pull-up) |
+| **4-6** | Light Switch (Low, Park, Toggle) | Digital (Input Pull-up) |
+| **7,8** | High Beam (In/Out) | Digital (Input Pull-up) |
+| **14** | Windshield Washer | Digital (Input Pull-up) |
 
 ---
 
